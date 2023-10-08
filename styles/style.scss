@@ -1,0 +1,102 @@
+@import '_variables.scss';
+@import '_placeholders.scss';
+@import '_timeline.scss';
+@import '_general.scss';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap');
+
+
+
+
+// Header
+
+header {
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    height: 10vh;
+    height: 10svh;
+
+    nav {
+        @extend %flexBetween;
+
+        img {
+            height: 60px;
+            width: 80px;
+            margin-left: 1rem;
+        }
+
+        #navigation {
+            @extend %flexBetween;
+            flex-basis: 500px;
+        }
+    }
+}
+
+// Section
+
+#section-1 {
+    @extend %flexCenter;
+    height: 90vh;
+    height: 90svh;
+    gap: 5rem;
+    
+    div.info-container {
+        display: flex;
+        flex-direction: column;
+        height: 420px;
+        flex-basis: 310px;
+        gap: 2rem;
+
+        div.header-info {
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+
+            h1 {
+                text-decoration: underline;
+                text-decoration-thickness: 0.1rem;
+                text-underline-position: under;
+            }
+    
+            p {
+                margin-top: .5rem;
+            }
+        }
+
+        
+
+        p.about-description {
+            width: 300px;
+            text-align: justify;
+        }
+
+        a.box-style {
+            display: flex;
+            justify-content: center;
+            background: $secondary-color;
+            padding: 1rem 6.5rem;
+            border: 0.188rem solid $border-color;
+            border-radius: 1rem;
+        }
+    }
+}
+
+img.personal-photo {
+    height: 520px;
+    width: 360px;
+    object-fit: cover;
+}
+
+span.special-word {
+    color: $secondary-color;
+}
+
+// Section Experiences
+
+#section-2 {
+
+    h1 {
+        text-align: center;
+    }
+    
+    
+}
