@@ -4,8 +4,6 @@
 @import '_general.scss';
 
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap');
-
 
 
 
@@ -48,10 +46,10 @@ header {
         gap: 2rem;
 
         div.header-info {
-            font-family: 'Inter', sans-serif;
             font-weight: 800;
 
             h1 {
+                font-size: 1.5em;
                 text-decoration: underline;
                 text-decoration-thickness: 0.1rem;
                 text-underline-position: under;
