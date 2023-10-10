@@ -112,7 +112,7 @@ header nav #navigation, header nav {
   margin-top: 10px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
   .ligne {
     position: relative;
     left: 200px;
@@ -141,6 +141,45 @@ body {
   color: #ffffff;
   font-family: "Inter", sans-serif;
   font-weight: 400;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border: 1px solid red;
+}
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+  }
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
 }
 
 h1, h2, h3 {
@@ -189,8 +228,7 @@ div.social-medias {
   gap: 1rem;
   opacity: 0.3;
 }
-
-span.line-social {
+div.social-medias span.line-social {
   border: 1px solid #ffffff;
   height: 6rem;
   width: 0.1rem;
