@@ -36,6 +36,38 @@ header {
             @extend %flexCenter;
             flex-direction: column;
             flex-basis: 500px;
+
+            @include md-screen {
+                flex-direction: row;
+                gap: 1.5rem;
+            }
+        }
+        
+        a {
+            font-size: 20px;
+            display: block;
+            margin: 10px 0;
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+                background-color: $secondary-color;
+                padding: 5px;
+                border-radius: 10px;
+            }
+
+            @include md-screen {
+                font-size: 18px;
+            }
+        }
+
+        @include md-screen {
+            position: static;
+            transform: none;
+            width: auto;
+            min-height: auto;
+            flex-direction: row;
+            justify-content: space-between;
+            border-bottom: none;
         }
     }
 }
@@ -44,7 +76,7 @@ header {
     position: fixed;
     z-index: 10;
     top: 30px;
-    right: 30px;
+    right: 20px;
     height: 50px;
     width: 50px;
     border: none;
@@ -72,6 +104,10 @@ header {
     .l3 {
         transform: translateY(10px)
     }
+
+    @include md-screen {
+        display: none;
+    }
 }
 
 .nav-toggler.active .l1 {
@@ -84,11 +120,7 @@ header {
     transform: translateY(0px) rotate(-135deg);
 }
 
-nav a {
-    font-size: 20px;
-    display: block;
-    margin: 10px 0;
-}
+
 
 // Section 1 - Présentation
 
@@ -97,6 +129,11 @@ nav a {
     height: 90vh;
     height: 90svh;
     gap: 5rem;
+    flex-direction: column;
+
+    @include md-screen {
+        flex-direction: row;
+    }
     
     div.info-container {
         display: flex;
@@ -125,21 +162,28 @@ nav a {
 
         p.about-description {
             width: 300px;
+            letter-spacing: 0.5px;
+            // word-spacing: 1px;
             text-align: justify;
         }
 
         a.box-style {
             display: flex;
             justify-content: center;
-            background: $secondary-color;
+            background-color: $secondary-color;
             padding: 1rem 6.5rem;
             border: 0.188rem solid $border-color;
             border-radius: 1rem;
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+                scale: 0.95;
+            }
         }
     }
 }
 
-img.personal-photo {
+#personal-photo-desktop {
     display: none;
     height: 520px;
     width: 360px;
@@ -150,6 +194,17 @@ img.personal-photo {
     }
 }
 
+#personal-photo-mobile {
+    height: 360px;
+    width: 360px;
+    border-radius: 9999px;
+    object-fit: cover;
+
+    @include md-screen {
+        display: none;
+    }
+}
+
 span.special-word {
     color: $secondary-color;
 }
@@ -157,6 +212,8 @@ span.special-word {
 // Section 3 - Projets
 
 #section3 {
+    margin-top: 100px;
+
     h1 {
         text-align: center;
     }
@@ -182,8 +239,12 @@ span.special-word {
                 height: 100%;
                 object-fit: cover;
                 border-radius: 15px;
+            }
+
+            #img-math {
                 object-position: left;
             }
+            
 
             div.card-content {
                 display: flex;

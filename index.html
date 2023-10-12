@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Valentin</title>
     <link rel="stylesheet" href="styles/style.css">
-    
 </head>
 <body>
     <header>
@@ -39,6 +38,7 @@
     </header>
     <!-- End of header -->
     <section id='section-1' class="container">
+      <img id="personal-photo-mobile" src="/medias/moi.jpg" alt="" />
       <div class="info-container">
           <div class="header-info">
               <h1>Valentin Descombes</h1>
@@ -50,17 +50,18 @@
           <a href="#experience" class="box-style">Click me</a>
       </div>
       <!-- End of info container -->
-      <img class="personal-photo" src="/medias/moi.jpg" alt="" />
+      <img id="personal-photo-desktop" src="/medias/moi.jpg" alt="" />
     </section>
     <!-- End of section 1 -->
     <div class="social-medias">
       <a href=""><i class="fa-brands fa-linkedin fa-2xl"></i></a>
       <a href=""><i class="fa-brands fa-square-github fa-2xl"></i></a>
+      <a href=""><i class="fa-solid fa-envelope fa-2xl"></i></a>
       <span class="line-social"></span>
     </div>
     <!-- End of social medias absolute position -->
     <section id="section-2" class="container">
-      <h1>Expériences & Formation</h1>
+      <h1>Formations & Expériences</h1>
       <div class="box-timeline">
 
         <div class="ligne"></div>
@@ -68,56 +69,62 @@
         <div class="rond r1" data-anim="1"><i class="fas fa-graduation-cap"></i></div>
         <div class="rond r2" data-anim="2"><i class="fas fa-graduation-cap"></i></div>
         <div class="rond r3" data-anim="3"><i class="fas fa-graduation-cap"></i></div>
-        <div class="rond r4" data-anim="4"><i class="fas fa-graduation-cap"></i></div>
         <!-- End of differents circle with icons  -->
 
         <div class="box b1" data-anim="1">
-            <h2>Lorem ipsum dolor sit amet.</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nisi maxime doloremque tempora exercitationem, minima eos impedit odit quia culpa voluptatum harum unde repellat commodi?
-            </p>
+          <h2>September 2022 - Juin 2025</h2>
+          <em>IUT de Saint-Diés-des-Vosges</em>
+          <p>
+            BUT MMI - Métiers du Multimédia et de l'Internet
+            Parcours Développement Orientation jeux vidéo
+            et web 
+          </p>
         </div>
         <!-- End of box 1 -->
         <div class="box b2" data-anim="2">
-            <h2>September 2022 - Juin 2025</h2>
-            <em>IUT de Saint-Diés-des-Vosges</em>
-            <p>
-              BUT MMI - Métiers du Multimédia et de l'Internet
-              Parcours Développement Orientation jeux vidéo
-              et web 
-            </p>
+          <h2>September 2018 - Juin 2022</h2>
+          <em>Lycée Jean Monnet | Crépy-en-Valois (60)</em>
+          <p>
+            Diplôme du baccalauréat - Mention Assez Bien
+            Mathématiques et Science de l''Informatique :
+            <ul id="box-details">
+              <li>Apprentissage de Python - POO, Algorithme de tris...</li>
+              <li>Apprentissage de Bases de données - MySQL</li>
+            </ul>
+          </p>
         </div>
         <!-- End of box 2 -->
         <div class="box b3" data-anim="3">
-            <h2>September 2018 - Juin 2022</h2>
-            <em>Lycée Jean Monnet | Crépy-en-Valois (60)</em>
-            <p>
-              Diplôme du baccalauréat - Mention Assez Bien
-              Mathématiques et Science de l''Informatique :
-              <ul id="box-details">
-                <li>Apprentissage de Python - POO, Algorithme de tris...</li>
-                <li>Apprentissage de Bases de données - MySQL</li>
-            </p>
-        </div>
-        <!-- End of box 3 -->
-        <div class="box b4" data-anim="4">
-            <h2>Lorem ipsum dolor sit amet.</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nisi maxime doloremque tempora exercitationem, minima eos impedit odit quia culpa voluptatum harum unde repellat commodi?
-            </p>
+          <h2>September 2018 - Juin 2022</h2>
+          <em>3 ans E-sport semi professionnel</em>
+          <p>Valeurs mobilisées :</p>
+          <div id="container-esport-details">
+            <ul id="box-details">
+              <li>Travail d'équipe</li>
+              <li>Discipline</li>
+              <li>Adaptabilité</li>
+            </ul>
+            <ul id="box-details">
+              <li>Travail d'équipe</li>
+              <li>Discipline</li>
+              <li>Adaptabilité</li>
+            </ul>
+          </div>
+          
+          
         </div>
       </div>
-      <!-- End of box 4 -->
+      <!-- End of box 3 -->
     </section>
     <!-- End of experiences and formations -->
     <section id="section3" class="container">
       <h1>Projects</h1>
       <div id="card-container">
         <a href="projet1.html" class="card">
-          <img src="/medias/projet-math.JPG" alt="Projet 1">
+          <img src="/medias/projet-math.JPG" alt="Projet 1" id="img-math">
           <div class="card-content">
             <h3>Site d'exercices Mathématiques de terminale.</h3>
-            <em>Date de réalisation - Mars 2022</em>
+            <em>Date de réalisation - Mars 2021</em>
             <p>Ce site a été créé en collaboration avec un camarade de classe afin de faciliter et d'améliorer la révision de nos autres camarades pour le baccalauréat de mathématiques.
             </p>
             <div id="logo-container">
@@ -129,31 +136,28 @@
         </a>
         <!-- End of terminale project -->
         <a href="projet1.html" class="card">
-          <img src="/medias/projet-math.JPG" alt="Projet 1">
+          <img src="/medias/zoo.png" alt="Projet 2">
           <div class="card-content">
-            <h3>Site d'exercices Mathématiques de terminale.</h3>
-            <em>Date de réalisation - Mars 2022</em>
-            <p>Ce site a été créé en collaboration avec un camarade de classe afin de faciliter et d'améliorer la révision de nos autres camarades pour le baccalauréat de mathématiques.
+            <h3>Site d'un zoo fictif : "Zoo de Saint-Nazaire".</h3>
+            <em>Date de réalisation - Avril 2022</em>
+            <p>Ce site a été créé dans le cadre d'un projet universitaire mobilisant l'apprentissage et l'utilisation du framework Bootstrap lié à une base de données.
             </p>
             <div id="logo-container">
-              <i class="fa-brands fa-sass fa-2xl"></i>
-              <i class="fa-brands fa-markdown fa-2xl"></i>
+              <i class="fa-brands fa-bootstrap fa-2xl"></i>
               <i class="fa-brands fa-php fa-2xl"></i>
             </div>
           </div>
         </a>
         <!-- End of  -->
         <a href="projet1.html" class="card">
-          <img src="/medias/projet-math.JPG" alt="Projet 1">
+          <img src="/medias/nsd.png" alt="Projet 3">
           <div class="card-content">
-            <h3>Site d'exercices Mathématiques de terminale.</h3>
-            <em>Date de réalisation - Mars 2022</em>
-            <p>Ce site a été créé en collaboration avec un camarade de classe afin de faciliter et d'améliorer la révision de nos autres camarades pour le baccalauréat de mathématiques.
+            <h3>Site vitrine pour un produit nostalgique</h3>
+            <em>Date de réalisation - Mai 2023</em>
+            <p>Ce site a été créé dans le cadre d'un projet universitaire mobilisant l'apprentissage et l'utilisation de Wordpress.
             </p>
             <div id="logo-container">
-              <i class="fa-brands fa-sass fa-2xl"></i>
-              <i class="fa-brands fa-markdown fa-2xl"></i>
-              <i class="fa-brands fa-php fa-2xl"></i>
+              <i class="fa-brands fa-wordpress fa-2xl"></i>
             </div>
           </div>
         </a>

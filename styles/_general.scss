@@ -30,7 +30,6 @@ body {
     margin-right: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    border: 1px solid red;
 
     @include xs-screen {
         max-width: 475px;
@@ -117,4 +116,3 @@ div.social-medias {
         width: 0.1rem;
     }
 }
-

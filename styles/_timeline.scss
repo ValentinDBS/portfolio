@@ -1,4 +1,6 @@
 #section-2 {
+    margin-top: 100px;
+    
     h1 {
         text-align: center;
     }
@@ -6,13 +8,14 @@
 
 .box-timeline {
     width: 100%;
-    height: 1500px;
+    min-height: 1000px;
     position: relative;
     padding: 80px 0 250px 0;
+    margin-bottom: 100px;
 }
 
 .ligne {
-    height: 1000px;
+    height: 690px;
     width: 8px;
     margin: 0 auto;
     background: $border-color;
@@ -24,7 +27,7 @@
     border-radius: 50%;
     background: $secondary-color;
     position: absolute;
-    border: 2px solid $border-color;
+    border: 1px solid $border-color;
     left: 50%;
     transform: translate(-50%);
     display: flex;
@@ -36,15 +39,15 @@
 .r1{top: 80px;}
 .r2{top: 386px;}
 .r3{top: 692px;}
-.r4{top: 1000px;}
 
 .box {
     max-width: 400px;
+    min-width: 300px;
     min-height: 200px;
+    background-color: $secondary-color;
     padding: 20px;
     border-radius: 3px;
     height: auto;
-    background: $secondary-color;
     box-shadow: 0 10px 15px rgba(0,0,0,0.5);
     position: absolute;
     left: 50%;
@@ -53,39 +56,29 @@
 
 .b1 {
     top: 80px;
-    left: calc(50% - 270px);
+    left: calc(50% + 270px);
 }
 .b2 {
     top: 386px;
-    left: calc(50% + 270px);
+    left: calc(50% - 270px);
 }
 .b3 {
     top: 692px;
-    left: calc(50% - 270px);
-}
-.b4 {
-    top: 1000px;
     left: calc(50% + 270px);
+
+    #container-esport-details {
+        display: flex;
+    }
 }
 
 .box p {
-    margin-top: 20px;
+    line-height: 20px;
+    font-size: 18px;
+    margin: 10px 0 20px 0;
 }
 
-.btn {
-    display: block;
-    background: $secondary-color;
-    border: 1px solid $border-color;
-    padding: 10px;
-    width: 120px;
-    text-align: center;
-    color: #f1f1f1;
-    text-decoration: none;
-    border-radius: 3px;
-    margin-top: 10px;
-}
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1000px) {
 
     .ligne {
         position: relative;

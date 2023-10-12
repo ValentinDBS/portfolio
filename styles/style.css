@@ -6,19 +6,23 @@
   align-items: center;
 }
 
+#section-2 {
+  margin-top: 100px;
+}
 #section-2 h1 {
   text-align: center;
 }
 
 .box-timeline {
   width: 100%;
-  height: 1500px;
+  min-height: 1000px;
   position: relative;
   padding: 80px 0 250px 0;
+  margin-bottom: 100px;
 }
 
 .ligne {
-  height: 1000px;
+  height: 690px;
   width: 8px;
   margin: 0 auto;
   background: #ffffff;
@@ -30,7 +34,7 @@
   border-radius: 50%;
   background: #af1b3f;
   position: absolute;
-  border: 2px solid #ffffff;
+  border: 1px solid #ffffff;
   left: 50%;
   transform: translate(-50%);
   display: flex;
@@ -52,17 +56,14 @@
   top: 692px;
 }
 
-.r4 {
-  top: 1000px;
-}
-
 .box {
   max-width: 400px;
+  min-width: 300px;
   min-height: 200px;
+  background-color: #af1b3f;
   padding: 20px;
   border-radius: 3px;
   height: auto;
-  background: #af1b3f;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
   position: absolute;
   left: 50%;
@@ -71,42 +72,29 @@
 
 .b1 {
   top: 80px;
-  left: calc(50% - 270px);
+  left: calc(50% + 270px);
 }
 
 .b2 {
   top: 386px;
-  left: calc(50% + 270px);
+  left: calc(50% - 270px);
 }
 
 .b3 {
   top: 692px;
-  left: calc(50% - 270px);
-}
-
-.b4 {
-  top: 1000px;
   left: calc(50% + 270px);
+}
+.b3 #container-esport-details {
+  display: flex;
 }
 
 .box p {
-  margin-top: 20px;
+  line-height: 20px;
+  font-size: 18px;
+  margin: 10px 0 20px 0;
 }
 
-.btn {
-  display: block;
-  background: #af1b3f;
-  border: 1px solid #ffffff;
-  padding: 10px;
-  width: 120px;
-  text-align: center;
-  color: #f1f1f1;
-  text-decoration: none;
-  border-radius: 3px;
-  margin-top: 10px;
-}
-
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1000px) {
   .ligne {
     position: relative;
     left: 200px;
@@ -143,7 +131,6 @@ body {
   margin-right: auto;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  border: 1px solid red;
 }
 @media (min-width: 475px) {
   .container {
@@ -261,12 +248,45 @@ header nav #navigation {
   flex-direction: column;
   flex-basis: 500px;
 }
+@media (min-width: 768px) {
+  header nav #navigation {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+header nav a {
+  font-size: 20px;
+  display: block;
+  margin: 10px 0;
+  transition: 0.3s ease-in-out;
+}
+header nav a:hover {
+  background-color: #af1b3f;
+  padding: 5px;
+  border-radius: 10px;
+}
+@media (min-width: 768px) {
+  header nav a {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  header nav {
+    position: static;
+    transform: none;
+    width: auto;
+    min-height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: none;
+  }
+}
 
 .nav-toggler {
   position: fixed;
   z-index: 10;
   top: 30px;
-  right: 30px;
+  right: 20px;
   height: 50px;
   width: 50px;
   border: none;
@@ -291,6 +311,11 @@ header nav #navigation {
 .nav-toggler .l3 {
   transform: translateY(10px);
 }
+@media (min-width: 768px) {
+  .nav-toggler {
+    display: none;
+  }
+}
 
 .nav-toggler.active .l1 {
   transform: translateY(0px) rotate(135deg);
@@ -304,16 +329,16 @@ header nav #navigation {
   transform: translateY(0px) rotate(-135deg);
 }
 
-nav a {
-  font-size: 20px;
-  display: block;
-  margin: 10px 0;
-}
-
 #section-1 {
   height: 90vh;
   height: 90svh;
   gap: 5rem;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  #section-1 {
+    flex-direction: row;
+  }
 }
 #section-1 div.info-container {
   display: flex;
@@ -336,18 +361,23 @@ nav a {
 }
 #section-1 div.info-container p.about-description {
   width: 300px;
+  letter-spacing: 0.5px;
   text-align: justify;
 }
 #section-1 div.info-container a.box-style {
   display: flex;
   justify-content: center;
-  background: #af1b3f;
+  background-color: #af1b3f;
   padding: 1rem 6.5rem;
   border: 0.188rem solid #ffffff;
   border-radius: 1rem;
+  transition: 0.3s ease-in-out;
+}
+#section-1 div.info-container a.box-style:hover {
+  scale: 0.95;
 }
 
-img.personal-photo {
+#personal-photo-desktop {
   display: none;
   height: 520px;
   width: 360px;
@@ -355,8 +385,21 @@ img.personal-photo {
      object-fit: cover;
 }
 @media (min-width: 768px) {
-  img.personal-photo {
+  #personal-photo-desktop {
     display: block;
+  }
+}
+
+#personal-photo-mobile {
+  height: 360px;
+  width: 360px;
+  border-radius: 9999px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 768px) {
+  #personal-photo-mobile {
+    display: none;
   }
 }
 
@@ -364,6 +407,9 @@ span.special-word {
   color: #af1b3f;
 }
 
+#section3 {
+  margin-top: 100px;
+}
 #section3 h1 {
   text-align: center;
 }
@@ -389,6 +435,8 @@ span.special-word {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px;
+}
+#section3 #card-container a.card #img-math {
   -o-object-position: left;
      object-position: left;
 }
