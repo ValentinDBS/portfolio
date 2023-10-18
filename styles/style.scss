@@ -23,6 +23,17 @@ header {
         transform: translateY(-100%);
         transition: transform 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84);
 
+        
+        @include md-screen {
+            position: static;
+            transform: none;
+            width: auto;
+            min-height: auto;
+            flex-direction: row;
+            justify-content: space-between;
+            border-bottom: none;
+        }
+
         &.active {
             transform: translate(0);
         }
@@ -42,33 +53,47 @@ header {
                 gap: 1.5rem;
             }
         }
-        
-        a {
+       
+        ul {
+            a {
+                font-size: 20px;
+                display: block;
+                margin: 10px 0;
+                transition: 0.3s ease-in-out;
+                border: 3px solid transparent;
+    
+                &:hover {
+                    border-bottom: 3px solid $secondary-color;
+                }
+    
+                @include md-screen {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        #logo {
+            transition: 0.3s linear;
+
+            &:hover {
+                scale: 1.1;
+                transition: 0.3s linear;
+            }
+        }
+
+        #right-nav {
+            transition: 0.3s linear;
             font-size: 20px;
             display: block;
             margin: 10px 0;
             transition: 0.3s ease-in-out;
+            border: 3px solid transparent;
 
             &:hover {
-                background-color: $secondary-color;
-                padding: 5px;
-                border-radius: 10px;
-            }
-
-            @include md-screen {
-                font-size: 18px;
+                border-bottom: 3px solid $secondary-color;
             }
         }
-
-        @include md-screen {
-            position: static;
-            transform: none;
-            width: auto;
-            min-height: auto;
-            flex-direction: row;
-            justify-content: space-between;
-            border-bottom: none;
-        }
+       
     }
 }
 
@@ -126,10 +151,13 @@ header {
 
 #section-1 {
     @extend %flexCenter;
-    height: 90vh;
-    height: 90svh;
+    // height: 90vh;
+    // height: 90svh;
+    height: 800px;
     gap: 5rem;
+    @extend %flexCenter;
     flex-direction: column;
+    margin-top: 50px;
 
     @include md-screen {
         flex-direction: row;
@@ -286,5 +314,21 @@ span.special-word {
                 }
             }
         }
+    }
+}
+
+// Footer 
+
+#footer {
+    height: 100px;
+    // color: $txt-color-secondary;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 1rem;
+
+    p {
+        text-align: center;
     }
 }

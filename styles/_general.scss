@@ -96,7 +96,24 @@ em {
 // Section About
 
 div.social-medias {
-    display: none;
+    position: fixed;
+    bottom: 0px;
+    left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0.3;
+    
+
+    a {
+        transition: 0.3s linear;
+
+        &:hover {
+            scale: 1.1;
+            transition: 0.3s linear;
+        }
+    }
     
     @include sm-screen {
         position: fixed;

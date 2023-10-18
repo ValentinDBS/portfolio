@@ -9,25 +9,19 @@
 <body>
     <header>
         <nav>
-          <img src="./medias/logo1.png" alt="Logo" />
+          <a id="logo" href="index.html"><img src="./medias/logo1.png" alt="Logo" /></a>
           <ul id="navigation">
             <li>
-              <a href="#section-1">About Me</a>
+              <a href="#section-1">Me concernant</a>
             </li>
             <li>
-              <a href="#experience">Experiences</a>
+              <a href="#section-2">Experiences</a>
             </li>
             <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-            <li>
-              <a href="resume.pdf">Resume</a>
+              <a href="#section-3">Projets</a>
             </li>
           </ul>
-          <a href="">Anglais</a>
+          <a id="right-nav" href="">CV</a>
         </nav>
         <button type="button" aria-label="toggle curtain navigation" class="nav-toggler">
           <span class="line l1"></span>
@@ -45,18 +39,19 @@
               <p>Young <span class="special-word">frontend web developer</span></p>
           </div>
           <!-- End of header info -->
-          <p class="about-description">I am currently a student at university of Saint-Diés-des-Vosges. I want to learn as much as possible about web development, because this is my passion. And I want this passion to be delivered into my creations.</p>
-          <p>If you want to learn more about me, <br />I invite you to click on this button :</p>
-          <a href="#experience" class="box-style">Click me</a>
+          <p class="about-description">Je suis actuellement étudiant à l'université de Saint-Dié-des-Vosges. Je veux en apprendre autant que possible sur le développement web, car c'est ma passion. Et je veux que cette passion se reflète dans mes créations.</p>
+          <p>Si vous voulez en savoir plus sur moi, <br />je vous invite à cliquer sur ce bouton </p>
+          <a href="#section-2" class="box-style">Cliquez moi</a>
       </div>
       <!-- End of info container -->
       <img id="personal-photo-desktop" src="/medias/moi.jpg" alt="" />
     </section>
     <!-- End of section 1 -->
     <div class="social-medias">
-      <a href=""><i class="fa-brands fa-linkedin fa-2xl"></i></a>
-      <a href=""><i class="fa-brands fa-square-github fa-2xl"></i></a>
-      <a href=""><i class="fa-solid fa-envelope fa-2xl"></i></a>
+      <a href="https://www.linkedin.com/in/valentin-descombes-810630265/
+      " target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+      <a href="https://github.com/ValentinDBS" target="_blank"><i class="fa-brands fa-square-github fa-2xl"></i></a>
+      <a href="mailto:valentin.descombes1@gmail.com" target="_blank"><i class="fa-solid fa-envelope fa-2xl"></i></a>
       <span class="line-social"></span>
     </div>
     <!-- End of social medias absolute position -->
@@ -135,7 +130,7 @@
           </div>
         </a>
         <!-- End of terminale project -->
-        <a href="projet1.html" class="card">
+        <a href="https://valentindbs.alwaysdata.net/" class="card">
           <img src="/medias/zoo.png" alt="Projet 2">
           <div class="card-content">
             <h3>Site d'un zoo fictif : "Zoo de Saint-Nazaire".</h3>
@@ -149,7 +144,7 @@
           </div>
         </a>
         <!-- End of zoo projects -->
-        <a href="projet1.html" class="card">
+        <a href="https://sae202.mmi-stdie.fr/nsd/" class="card">
           <img src="/medias/nsd.png" alt="Projet 3">
           <div class="card-content">
             <h3>Site vitrine pour un produit nostalgique</h3>
@@ -166,6 +161,13 @@
       <!-- End of card container -->
     </section>
     <!-- End of projects -->
+    <section class="section-4">
+      <footer id="footer">
+        <p>
+          &copy Développement | Valentin Descombes & Design | Lucille Arronis
+        </p>
+      </footer>
+    </section>
     <!-- Script part -->
     <script src="https://kit.fontawesome.com/ebbcd633ec.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>

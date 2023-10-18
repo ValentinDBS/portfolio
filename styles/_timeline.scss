@@ -1,3 +1,5 @@
+@import '_breakpoints.scss';
+
 #section-2 {
     margin-top: 100px;
     
@@ -41,8 +43,7 @@
 .r3{top: 692px;}
 
 .box {
-    max-width: 400px;
-    min-width: 300px;
+    width: 380px;
     min-height: 200px;
     background-color: $secondary-color;
     padding: 20px;
@@ -52,6 +53,10 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+
+    @include sm-screen {
+        width: 400px;
+    }
 }
 
 .b1 {
